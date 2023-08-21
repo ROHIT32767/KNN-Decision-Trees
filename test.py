@@ -9,3 +9,6 @@ vit_encoding2 = [0.1, 0.6, 0.9, 0.2, 0.3]
 
 distance = euclidean_distance(vit_encoding1, vit_encoding2)
 print("Euclidean Distance:", distance)
+
+N = np.array(range(10))+1
+print(N)
