@@ -1,5 +1,6 @@
 import pickle
 import os
+import sys
 import time
 import numpy as np
 import pandas as pd
@@ -121,3 +122,13 @@ class Best_KNN:
         df = pd.DataFrame(print_data,columns=['Measure','Value'])
         print(df.to_string(index=False))
     
+if len(sys.argv) != 2:
+    print("Usage: python KNN.py <path_to_input_file>")
+    sys.exit(1)
+
+input_file = sys.argv[1]
+
+if not os.path.isfile(input_file):
+    print("Error: Input file '{}' not found.".format(input_file))
+    sys.exit(1)
+
