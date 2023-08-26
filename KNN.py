@@ -131,4 +131,6 @@ input_file = sys.argv[1]
 if not os.path.isfile(input_file):
     print("Error: Input file '{}' not found.".format(input_file))
     sys.exit(1)
-
+data = np.load(input_file, allow_pickle=True)
+Best_KNN_Object = Best_KNN(3,'vit','manhattan')
+Best_KNN_Object.print_answer(data)
